@@ -9,6 +9,13 @@ npm install typescript -D
 npx tsc --init
 npx ts-node src/server.ts
 npm install ts-node-dev -D
+npx ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts
+npm install knex
+npm install sqlite3
+npx knex --knexfile knexfile.ts migrate:latest
+npx knex --knexfile knexfile.ts seed:run
+npm install cors
+npm install @types/cors -D
 
 // ----------- Frontend --------------
 
